@@ -1,0 +1,233 @@
+/* RESET CSS */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none!important;
+}
+
+body, html{
+    font-family: 'Nunito', sans-serif;
+}
+body.-lightMode{
+    background-color: #fff;
+}
+body.-darkMode{
+    background-color: #131617;
+}
+
+.container{
+    padding: 0;
+}
+
+/* HEADING */
+h1{
+    font-size: 3.125rem;
+    font-weight: 700;
+    line-height: 115%;
+}
+h2{
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 115%;
+}
+h3{
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 115%;
+}
+h4{
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 120%;
+}
+h5{
+    font-size: 1.625rem;
+    font-weight: 700;
+    line-height: 125%;
+}
+h6{
+    font-size: 1.375rem;
+    font-weight: 700;
+    line-height: 125%;
+}
+
+body.-lightMode h1, body.-lightMode h2, body.-lightMode h3, body.-lightMode h4, body.-lightMode h5, body.-lightMode h6{
+    color: #2C3038;
+}
+
+body.-darkMode h1, body.-darkMode h2, body.-darkMode h3, body.-darkMode h4, body.-darkMode h5, body.-darkMode h6{
+    color: #EEE;
+}
+
+/* P */
+.textBody{
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: 400;
+}
+.textCaption{
+    margin:0;
+    font-size: 1rem;
+    line-height: 125%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+body.-lightMode p, body.-lightMode i{
+    color: #5A5A5A;
+}
+body.-darkMode p, body.-darkMode i{
+    color: #B7B7B7;
+}
+
+/* BUTTON */
+.btnCircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    color: #5a5a5a;
+    border: 1px solid #EEE;
+    background: #F7F9FC;
+    opacity: 0.7;
+
+    transition: all 0.2s;
+}
+
+.btnCircle:hover{
+    color: #2C3038;
+    opacity: 1;
+}
+
+.btnSecondary{
+    padding:0 32px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 52px;
+
+    text-transform: uppercase;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0);
+
+    transition: all 0.5s;
+}
+body.-lightMode .btnSecondary{
+    color: #DC4F72;
+    border: 1px solid #DC4F72;
+}
+body.-darkMode .btnSecondary{
+    color: #DC4F72;
+    border: 1px solid #DC4F72;
+}
+
+body.-lightMode .btnSecondary:hover,
+body.-darkMode .btnSecondary:hover{
+    background-color: #DC4F72;
+    color: white;
+}
+
+
+.btnIcon{
+    width:40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0);
+    color: #404040;
+    border-radius: 50%;
+    border: none;
+
+    transition: all 0.2s;
+}
+.btnIcon:hover{
+    background-color: rgba(0, 0, 0, .08);
+ 
+}
+
+/* LIGHT MODE - DARK MODE */
+
+
+
+
+
+/* Đè CSS */
+body.-lightMode .bg-light{
+    background-color: white!important;
+}
+
+
+/* NAVIGATION */
+nav{
+    padding: 16px 0!important;
+    transition: padding 0.3s;
+}
+body.-lightMode nav{
+    background-color: #FFF!important;
+    box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.05);
+}
+body.-darkMode nav{
+    background-color: #131617!important;
+    box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.05);
+}
+
+.-navShrink { /* Xử lý scroll thì thu nhỏ */
+  padding: 8px 0!important;
+}
+
+.navbar-brand{
+    color: #DC4F72!important;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -1px;
+}
+.nav__actionBar{
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.nav-item{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+.nav-link{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 0;
+
+    transition: all 0.5s;
+}
+body.-lightMode .nav-link{
+    color: #2c3038 !important;;
+}
+body.-darkMode .nav-link{
+    color: #EEE !important;;
+}
+.nav-link::after{
+    content: ' ';
+    display: block;
+    width: 0px;
+    height: 2px;
+
+    background-color: #DC4F72;
+
+    transition: all 0.5s;
+}
+.nav-link:hover::after{
+    width: 24px;
+}
+.navbar-nav .active a{
+    color: #DC4F72!important;
+}
+.dropdown a i{
+    font-size: 0.75rem;
+}
