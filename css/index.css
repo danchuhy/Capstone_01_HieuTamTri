@@ -59,9 +59,6 @@ body.-darkMode{
 .feature__tilte{
     max-width: 750px;
 }
-.feature__featureHList{
-    margin-top: 48px;
-}
 .feature__featureItem{
     display: flex;
     flex-direction: column;
