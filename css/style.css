@@ -1,4 +1,4 @@
-/* RESET CSS */
+/* -------------- RESET CSS -------------- */
 *{
     margin: 0;
     box-sizing: border-box;
@@ -7,8 +7,21 @@ a{
     text-decoration: none!important;
 }
 
+/* Đè CSS */
+body.-lightMode .bg-light{
+    background-color: white!important;
+}
+
+
+
+/* ------------ TAGS ------------ */
+
+/* body */
+
 body, html{
     font-family: 'Nunito', sans-serif;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
 }
 body.-lightMode{
     background-color: #fff;
@@ -18,7 +31,7 @@ body.-darkMode{
 }
 
 
-/* HEADING */
+/* heading */
 h1{
     font-size: 3.125rem;
     font-weight: 700;
@@ -51,14 +64,24 @@ h6{
 }
 
 body.-lightMode h1, body.-lightMode h2, body.-lightMode h3, body.-lightMode h4, body.-lightMode h5, body.-lightMode h6{
-    color: #2C3038;
+    color: #2C3038; /* light mode */
 }
 
 body.-darkMode h1, body.-darkMode h2, body.-darkMode h3, body.-darkMode h4, body.-darkMode h5, body.-darkMode h6{
-    color: #EEE;
+    color: #EEE; /* dark mode */
 }
 
-/* P */
+/* p & i */
+body.-lightMode p{
+    color: #5A5A5A; /* light mode */
+}
+body.-darkMode p{
+    color: #B7B7B7; /* dark mode */
+}
+
+/* ------------ COMPONENTS ------------ */
+
+/* text */
 .textBody{
     font-size: 1rem;
     line-height: 150%;
@@ -72,14 +95,7 @@ body.-darkMode h1, body.-darkMode h2, body.-darkMode h3, body.-darkMode h4, body
     text-transform: uppercase;
 }
 
-body.-lightMode p, body.-lightMode i{
-    color: #5A5A5A;
-}
-body.-darkMode p, body.-darkMode i{
-    color: #B7B7B7;
-}
-
-/* BUTTON */
+/* circle button - nút tròn có icon bên trong */
 .btnCircle{
     display: flex;
     justify-content: center;
@@ -88,19 +104,32 @@ body.-darkMode p, body.-darkMode i{
     height: 40px;
 
     border-radius: 50%;
-    color: #5a5a5a;
-    border: 1px solid #EEE;
-    background: #F7F9FC;
     opacity: 0.7;
 
     transition: all 0.2s;
 }
+body.-lightMode .btnCircle{
+    color: #5a5a5a; /* light mode */
+    border: 1px solid #EEE;
+    background: #F7F9FC;
+}
+body.-darkMode .btnCircle{
+    color: #B7B7B7; /* dark mode */
+    border: 1px solid #333;
+    background: #191C1D;
+}
 
-.btnCircle:hover{
-    color: #2C3038;
+body.-lightMode .btnCircle:hover{
+    color: #2C3038; /* light mode */
+    opacity: 1;
+}
+body.-darkMode .btnCircle:hover{
+    color: white; /* dark mode */
     opacity: 1;
 }
 
+
+/* secondary button - Nút outline màu hồng */
 .btnSecondary{
     padding:0 32px;
     font-size: 14px;
@@ -108,17 +137,17 @@ body.-darkMode p, body.-darkMode i{
     line-height: 52px;
 
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius: 6px;
     background-color: rgba(0, 0, 0, 0);
 
     transition: all 0.5s;
 }
-body.-lightMode .btnSecondary{
-    color: #DC4F72;
+body.-lightMode .btnSecondary{ 
+    color: #DC4F72; /* light mode */
     border: 1px solid #DC4F72;
 }
 body.-darkMode .btnSecondary{
-    color: #DC4F72;
+    color: #DC4F72; /* dark mode */
     border: 1px solid #DC4F72;
 }
 
@@ -128,8 +157,35 @@ body.-darkMode .btnSecondary:hover{
     color: white;
 }
 
+/* primary button - Nút màu hồng */
+.btnPrimary{
+    padding:0 24px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 52px;
 
-.btnIcon{
+    text-transform:capitalize;
+    border-radius: 6px;
+
+    transition: all 0.2s;
+}
+body.-lightMode .btnPrimary, body.-darkMode .btnPrimary{ 
+    color: white; /* light mode + dark mode */
+    background-color: #DC4F72;
+}
+body.-lightMode .btnPrimary:hover, body.-darkMode .btnPrimary:hover{ 
+    color: white; /* light mode + dark mode */
+    background-color: #c73559;
+}
+body.-lightMode .btnPrimaryactive, body.-darkMode .btnPrimary:active {
+    color: white; /* light mode + dark mode */
+    background-color: #a41c3e;
+}
+
+
+
+
+.nav__btnIcon{
     width:40px;
     height: 40px;
     display: flex;
@@ -137,26 +193,36 @@ body.-darkMode .btnSecondary:hover{
     justify-content: center;
 
     background-color: rgba(0, 0, 0, 0);
-    color: #404040;
     border-radius: 50%;
     border: none;
 
     transition: all 0.2s;
 }
-.btnIcon:hover{
-    background-color: rgba(0, 0, 0, .08);
- 
+body.-lightMode .nav__btnIcon{
+    color:#5a5a5a; /* light mode */
+    opacity: 0.7;
+}
+body.-darkMode .nav__btnIcon{
+    color: #b7b7b7; /* dark mode */
+    opacity: 0.7;
 }
 
-/* LIGHT MODE - DARK MODE */
+body.-lightMode .nav__btnIcon:hover{
+    color: #191C1D;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .08); /* light mode */
+}
+body.-darkMode .nav__btnIcon:hover{
+    color: white;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, .08); /* dark mode */
+}
 
-
-
-
-
-/* Đè CSS */
-body.-lightMode .bg-light{
-    background-color: white!important;
+body.-lightMode .nav__btnIcon:active{
+    background-color: rgba(0, 0, 0, .2); /* light mode */
+}
+body.-darkMode .nav__btnIcon:active{
+    background-color: rgba(255, 255, 255, .2); /* dark mode */
 }
 
 
@@ -188,7 +254,10 @@ body.-darkMode nav{
 .nav__actionBar{
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1rem;
+}
+.nav__mobileAction{
+    gap: 0.5rem;
 }
 .nav-item{
     display: flex;
@@ -204,11 +273,15 @@ body.-darkMode nav{
     transition: all 0.5s;
 }
 body.-lightMode .nav-link{
-    color: #2c3038 !important;;
+    color: #2c3038 !important;
 }
 body.-darkMode .nav-link{
-    color: #EEE !important;;
+    color: #b7b7b7 !important;
 }
+body.-lightMode .nav-link:hover, body.-darkMode .nav-link:hover{
+    color: #DC4F72!important;
+}
+
 .nav-link::after{
     content: ' ';
     display: block;
@@ -228,3 +301,169 @@ body.-darkMode .nav-link{
 .dropdown a i{
     font-size: 0.75rem;
 }
+body.-darkMode .dropdown-menu{
+    color: ;
+    background-color: #131617;
+    box-shadow: 1px 5px 7.5px rgba(14, 13, 13, 0.2);
+    border: 1px solid #333;
+}
+body.-lightMode .dropdown-item{
+    color: #2c3038 !important;
+}
+body.-darkMode .dropdown-item{
+    color: #b7b7b7 !important;
+}
+body.-lightMode .dropdown-item:hover, body.-darkMode .dropdown-item:hover{
+    color: #DC4F72!important;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* SEARCH */
+#search{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 99;
+}
+.nav__popup{
+    width: 100%;
+}
+.nav__popup form{
+    padding: 15px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+
+}
+.nav__popup input{
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 12px 24px;
+    border-radius: 6px 0 0 6px;
+}
+body.-lightMode .nav__popup input{
+    color: #5a5a5a;
+    background-color: #fff;
+}
+body.-darkMode .nav__popup input{
+    color: #b7b7b7;
+    background-color: #131617;
+    border: 1px solid #333;
+}
+.nav__popup .btnPrimary{
+    flex-shrink: 0;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    outline: none;
+}
+
+.nav__popup .close{
+    position: absolute;
+    top: -40px;
+    right: 15px;
+}
+body.-lightMode .nav__popup .close, body.-darkMode .nav__popup .close{
+    color: white; /* light mode + dark mode*/
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+
+    .nav__mobileAction{
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+    .container{
+        position: relative;
+    }
+
+    /* Điều chỉnh style để phù hợp với giao diện expand mobile */
+    .navbar-nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-item{
+        width: 100%;
+        text-align: center;
+    }
+    .dropdown-menu{
+        text-align: center;
+    }
+    .nav__actionBar{
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+
+    .nav-link::after{
+        display: none;
+    }
+    .dropdown{
+        text-align: center;
+    }
+    .navbar-expand-lg>.container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    /* Định dạng cho button hamburger */
+    #hamburgerBtn{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #DC4F72;
+        border-radius: 6px;
+        transition: all 0.2s;
+    }
+    #hamburgerBtn:hover{
+        background-color: #c73559;
+    }
+    #hamburgerBtn:focus {
+        background-color: #c73559;
+    }
+    #iconExpand{
+        display: block;
+        font-size: 24px;
+        color: white;
+        text-align: center;
+    }
+    #iconClose{
+        display: none;
+        font-size: 24px;
+        color: white;
+        text-align: center;
+    }
+    
+  }
+
+@media only screen and (max-width: 576px) {
+    .nav__popup form{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .nav__popup input{
+        flex-grow: 1;
+    }
+    .nav__popup .btnPrimary{
+        flex-grow: 1;
+        border-radius: 6px;
+    }
+
+}
+
+
