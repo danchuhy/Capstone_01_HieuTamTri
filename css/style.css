@@ -94,6 +94,12 @@ body.-darkMode p{
     font-weight: 700;
     text-transform: uppercase;
 }
+.textCaptionLow{
+    margin:0;
+    font-size: 1rem;
+    line-height: 125%;
+    font-weight: 700;
+}
 
 /* circle button - nút tròn có icon bên trong */
 .btnCircle{
@@ -166,6 +172,8 @@ body.-darkMode .btnSecondary:hover{
 
     text-transform:capitalize;
     border-radius: 6px;
+    border: none;
+    outline: none;
 
     transition: all 0.2s;
 }

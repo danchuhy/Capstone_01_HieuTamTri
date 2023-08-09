@@ -98,6 +98,56 @@ body.-darkMode .feature__featureItem:hover{
     height: 72px; 
 }
 
+/* ABOUT */
+body.-lightMode .about{
+    background-color: #f6f9fc;
+}
+body.-darkMode .about{
+    background-color: #1a1c1d;
+}
+
+.about .btnPrimary{
+   font-size: 14px;
+   font-weight: 700; 
+   text-transform:uppercase;
+}
+
+/* NUMBER */
+body.-lightMode .number{
+    background-color: #f6f9fc;
+}
+body.-darkMode .number{
+    background-color: #1a1c1d;
+}
+.number__item{
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 1px 5px 7.5px 0px rgba(14, 13, 13, 0.20);
+}
+body.-lightMode .number__item{
+    border: 1px solid #F8F9FA; /* light mode */
+    background: #FFF;
+
+    transition: all 0.2s;
+}
+body.-darkMode .number__item{
+    border: 1px solid #333; /* dark mode */
+    background: #131617;
+}
+
+body.-lightMode .number__item:hover{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09)
+}
+
+.number__bigNum{
+    font-size: 3.125rem;
+    font-weight: 700;
+    color: #DC4F72!important;
+}
+
+
+
+
 /* BACK TO TOP */
 .backToTop{
     width: 48px;
