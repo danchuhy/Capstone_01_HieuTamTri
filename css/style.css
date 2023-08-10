@@ -3,6 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+*:focus{ 
+  outline: none;
+  box-shadow: none!important;
+}
 a {
   text-decoration: none !important;
 }
@@ -74,7 +78,7 @@ body.-darkMode h1,
 body.-darkMode h2,
 body.-darkMode h3,
 body.-darkMode h4,
-body.-darkMode h5,
+body.-darkModze h5,
 body.-darkMode h6 {
   color: #eee; /* dark mode */
 }
@@ -260,12 +264,15 @@ body.-darkMode nav {
 }
 
 .navbar-brand {
+  display: flex;
+  gap: 8px;
   color: #dc4f72 !important;
   font-size: 26px;
   font-weight: 700;
   line-height: 32px;
   letter-spacing: -1px;
 }
+
 .nav__actionBar {
   display: flex;
   align-items: center;
@@ -318,7 +325,7 @@ body.-darkMode .nav-link:hover {
   font-size: 0.75rem;
 }
 body.-darkMode .dropdown-menu {
-  color: ;
+  color: white;
   background-color: #131617;
   box-shadow: 1px 5px 7.5px rgba(14, 13, 13, 0.2);
   border: 1px solid #333;
