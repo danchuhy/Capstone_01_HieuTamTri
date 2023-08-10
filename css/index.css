@@ -4,16 +4,16 @@
 }
 /* Home Title */
 
-.feature__tilte .textCaption{
+.-homeTitle .textCaption{
     text-align: center;
     color: #DC4F72!important;
     text-transform: uppercase;
 }
-.feature__tilte h2{
+.-homeTitle h2{
     text-align: center;
     line-height: 100%;
 }
-.feature__tilte .textBody{
+.-homeTitle .textBody{
     text-align: center;
 }
 
@@ -97,8 +97,18 @@ body.-darkMode .feature__featureItem:hover{
     width: 72px;
     height: 72px; 
 }
+body.-lightMode .feature__featureItem h5{
+    color: #2C3038;
+}
+body.-darkMode .feature__featureItem h5{
+    color: #EEE;
+}
 
 /* ABOUT */
+.about{
+    padding-top: 80px;
+    padding-bottom: 64px;
+}
 body.-lightMode .about{
     background-color: #f6f9fc;
 }
@@ -113,6 +123,10 @@ body.-darkMode .about{
 }
 
 /* NUMBER */
+.number{
+    padding-top: 24px;
+    padding-bottom: 64px;
+}
 body.-lightMode .number{
     background-color: #f6f9fc;
 }
@@ -144,6 +158,138 @@ body.-lightMode .number__item:hover{
     font-weight: 700;
     color: #DC4F72!important;
 }
+
+/* INFO */
+.info {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.33)),
+      url('../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 480px;
+    display: grid;
+    align-items: center;
+    padding: 2rem 0;
+  }
+.info__content {
+max-width: 550px;
+}
+.info .info__content h2 {
+color: #fff;
+font-size: 30px;
+font-weight: 700;
+}
+.info .info__content p {
+color: #fff;
+font-size: 1rem;
+line-height: 24px;
+margin-top: 1.5rem;
+margin-bottom: 3rem;
+}
+.info .info__content button {
+font-weight: 700;
+padding: 10px 30px;
+}
+
+/* FAQs */
+body.-lightMode .FAQs {
+    background-color: #F7F9FC;
+}
+body.-darkMode .FAQs {
+    background-color: #1a1c1d;
+}
+
+.FAQs__title {
+color: #dc4f72 !important;
+text-transform: uppercase;
+margin-bottom: 0.3125rem;
+}
+.FAQs .FAQs__header .my-3 p:first-of-type {
+display: inline-block;
+width: 700px;
+text-align: center;
+z-index: 11;
+}
+.FAQs__left img {
+border-radius: 5px;
+transition: all 0.5s;
+}
+.FAQs__left img:hover {
+transform: translateY(-0.5rem);
+}
+.FAQs__left .card {
+width: 625px;
+padding: 25px 50px 25px 20px;
+}
+.FAQs__right button {
+display: flex;
+max-width: 1000px;
+justify-content: space-between;
+}
+.FAQs__right .card {
+border: none;
+border-radius: 6px;
+padding-bottom: 15px;
+}
+.FAQs__right .card button {
+text-decoration: none;
+color: #131617;
+border-radius: 6px;
+}
+
+.accordion .card{
+padding: 16px 0;
+margin-bottom: 16px;
+border-radius: 6px;
+}
+body.-lightMode .accordion .card{
+background-color: white;
+border: 1px solid #EEE;
+
+}
+body.-darkMode .accordion .card{
+background-color: #131617;
+border: 1px solid #333;
+}
+
+.accordion .card-header{
+border:none;
+}
+body.-lightMode .accordion .card-header{
+background-color: white;
+}
+body.-darktMode .accordion .card-header{
+background-color: rgb(0,0,0);
+}
+
+
+.accordion .card-header button{
+    padding: 0;
+}
+
+.accordion .card-header button span{
+    font-size: 1.25rem!important;
+}
+body.-lightMode .accordion .card-header button span,
+body.-lightMode .accordion .card-header button i{
+    color: #2C3038;
+}
+body.-darkMode .accordion .card-header button span,
+body.-darkMode .accordion .card-header button i{
+    color: #EEE;
+}
+
+.accordion .card-body{
+    padding: 0 20px;
+}
+body.-lightMode .accordion .card-body {
+    color: rgb(90, 90, 90);
+}
+body.-darkMode .accordion .card-body {
+    color: rgb(183, 183, 183)
+}
+
 
 
 
