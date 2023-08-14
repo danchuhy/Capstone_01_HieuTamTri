@@ -615,13 +615,13 @@ img.shadow {
     border-top: none;
   }
   .resp-tabs-container {
-    border: 1px solid var(--border-color-light);
+    border: 1px solid rgb(193, 193, 193);
   }
   .resp-vtabs .resp-tab-content {
     border: 1px solid var(--border-color-light);
   }
   .resp-vtabs .resp-tabs-container {
-    border: none;
+    border: 1px solid rgb(193, 193, 193);
     float: none;
     width: 100%;
     min-height: 100px;
