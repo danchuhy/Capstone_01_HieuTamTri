@@ -492,7 +492,7 @@
                     border-color: rgb(193, 193, 193);
                   "
                 >
-                  <span class="resp-arrow"></span>Project One
+                  <span class="resp-arrow"></span>
                 </h2>
                 <div
                   class="products-content resp-tab-content hor_1 resp-tab-content-active"
@@ -533,7 +533,7 @@
                     border-color: rgb(193, 193, 193);
                   "
                 >
-                  <span class="resp-arrow"></span>Project Two
+                  <span class="resp-arrow"></span>
                 </h2>
                 <div
                   class="products-content resp-tab-content hor_1"
@@ -573,7 +573,7 @@
                     border-color: rgb(193, 193, 193);
                   "
                 >
-                  <span class="resp-arrow"></span>Project Three
+                  <span class="resp-arrow"></span>
                 </h2>
                 <div
                   class="products-content resp-tab-content hor_1"
@@ -1010,31 +1010,50 @@
        $('.counter').countUp();
    </script>
 
+<!-- jquery-1.9.1  -->
+<script src="./js/jquery-1.9.1.min.js"></script>
+
  <!-- Easy Responsive Tabs -->
  <script src="./js/easyResponsiveTabs.js"></script>
 
  <!-- OWL CAROUSEL JS  -->
  <script src="./js/owl.carousel.min.js"></script>
 
- <!-- JS PHẦN PROJECT  -->
- <script type="text/javascript">
-   $(document).ready(function () {
-     //Horizontal Tab
-     $('#parentHorizontalTab').easyResponsiveTabs({
-       type: 'default', //Types: default, vertical, accordion
-       width: 'auto', //auto or any width like 600px
-       fit: true, // 100% fit in a container
-       tabidentify: 'hor_1', // The tab groups identifier
-       activate: function (event) { // Callback function if tab is switched
-         var $tab = $(this);
-         var $info = $('#nested-tabInfo');
-         var $name = $('span', $info);
-         $name.text($tab.text());
-         $info.show();
-       }
-     });
-   });
- </script>
+ <!-- script for blog  -->
+ <script>
+  $(document).ready(function () {
+    $('.owl-one').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      responsiveClass: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        480: {
+          items: 1,
+          nav: false
+        },
+        667: {
+          items: 1,
+          nav: false
+        },
+        1000: {
+          items: 1,
+          nav: false
+        }
+      }
+    })
+  })
+</script>
+
+
 
 <!-- JS PHẦN OWL TESTIMONIAL -->
 
@@ -1070,6 +1089,61 @@
    })
  })
  </script>
+
+ <!-- script for customer  -->
+ <script>
+
+$(document).ready(function () {
+    $('.owl-three').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      responsiveClass: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        480: {
+          items: 1,
+          nav: false
+        },
+        667: {
+          items: 2,
+          nav: false
+        },
+        1000: {
+          items: 4,
+          nav: false
+        }
+      }
+    })
+  })
+
+ </script>
+  <!-- JS PHẦN PROJECT  -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      //Horizontal Tab
+      $('#parentHorizontalTab').easyResponsiveTabs({
+        type: 'default', //Types: default, vertical, accordion
+        width: 'auto', //auto or any width like 600px
+        fit: true, // 100% fit in a container
+        tabidentify: 'hor_1', // The tab groups identifier
+        activate: function (event) { // Callback function if tab is switched
+          var $tab = $(this);
+          var $info = $('#nested-tabInfo');
+          var $name = $('span', $info);
+          $name.text($tab.text());
+          $info.show();
+        }
+      });
+    });
+  </script>
    
 
 </body>

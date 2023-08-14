@@ -781,6 +781,174 @@ body.-darkMode .resp-tabs-list li {
   padding: 0;
 }
 
+.w3l-testimonials .slider-info {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 50px;
+  background-color: var(--bg-color);
+  border-radius: var(--card-curve); }
+
+.w3l-testimonials .img-circle {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  overflow: hidden;
+  background: #f3f6f9;
+  border-radius: 50%;
+  border: 3px solid var(--primary); }
+
+.w3l-testimonials .img-circle img {
+  width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center; }
+
+.w3l-testimonials .message {
+  position: relative; }
+
+.w3l-testimonials .message span {
+  font-size: 30px;
+  color: var(--title-color);
+  opacity: 0.2;
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  right: 0; }
+
+.w3l-testimonials .message p {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--title-color); }
+
+.w3l-testimonials .name h4 {
+  font-size: 18px;
+  color: var(--primary);
+  font-weight: 400; }
+
+.w3l-testimonials .name p {
+  font-size: 13px;
+  color: var(--text-color); }
+
+@media (max-width: 992px) {
+  .w3l-testimonials .message {
+    margin-top: 1rem;
+    padding-bottom: 0;
+    padding: 0rem; } }
+
+@media (max-width: 900px) {
+  .w3l-testimonials .slider-info {
+    padding: 2rem; } }
+
+@media (max-width: 667px) {
+  .w3l-testimonials .slider-info {
+    grid-template-columns: 1fr;
+    grid-gap: 30px; }
+  .w3l-testimonials .img-circle {
+    margin-left: auto;
+    margin-right: auto; }
+  .w3l-testimonials .message {
+    text-align: center; }
+  .w3l-testimonials .message span {
+    left: 0px; } }
+
+@media (max-width: 480px) {
+  .w3l-testimonials .slider-info {
+    grid-gap: 10px;
+    padding: 2rem 1rem; } }
+
+.w3l-testimonials .owl-two.owl-theme .owl-nav [class*=owl-prev],
+.w3l-testimonials .owl-two.owl-theme .owl-nav [class*=owl-next] {
+  display: none; }
+
+.w3l-testimonials .slider-info {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 50px;
+  background-color: var(--bg-color);
+  border-radius: var(--card-curve); }
+
+.w3l-testimonials .img-circle {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  overflow: hidden;
+  background: #f3f6f9;
+  border-radius: 50%;
+  border: 3px solid var(--primary); }
+
+.w3l-testimonials .img-circle img {
+  width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center; }
+
+.w3l-testimonials .message {
+  position: relative; }
+
+.w3l-testimonials .message span {
+  font-size: 30px;
+  color: var(--title-color);
+  opacity: 0.2;
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  right: 0; }
+
+.w3l-testimonials .message p {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--title-color); }
+
+.w3l-testimonials .name h4 {
+  font-size: 18px;
+  color: var(--primary);
+  font-weight: 400; }
+
+.w3l-testimonials .name p {
+  font-size: 13px;
+  color: var(--text-color); }
+
+@media (max-width: 992px) {
+  .w3l-testimonials .message {
+    margin-top: 1rem;
+    padding-bottom: 0;
+    padding: 0rem; } }
+
+@media (max-width: 900px) {
+  .w3l-testimonials .slider-info {
+    padding: 2rem; } }
+
+@media (max-width: 667px) {
+  .w3l-testimonials .slider-info {
+    grid-template-columns: 1fr;
+    grid-gap: 30px; }
+  .w3l-testimonials .img-circle {
+    margin-left: auto;
+    margin-right: auto; }
+  .w3l-testimonials .message {
+    text-align: center; }
+  .w3l-testimonials .message span {
+    left: 0px; } }
+
+@media (max-width: 480px) {
+  .w3l-testimonials .slider-info {
+    grid-gap: 10px;
+    padding: 2rem 1rem; } }
+
+.w3l-testimonials .owl-two.owl-theme .owl-nav [class*=owl-prev],
+.w3l-testimonials .owl-two.owl-theme .owl-nav [class*=owl-next] {
+  display: none; }
+
 /* dark mode testimonial */
 body.-darkMode .testimonial__main {
   background: linear-gradient(to right, #131617, rgba(255, 255, 255, 0.77)),
