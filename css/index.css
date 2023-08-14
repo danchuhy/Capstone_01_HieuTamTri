@@ -115,6 +115,10 @@ body.-lightMode .about{
 body.-darkMode .about{
     background-color: #1a1c1d;
 }
+.about__content .textCaption{
+    color: #DC4F72!important;
+    margin-bottom: 8px;
+}
 
 .about .btnPrimary{
    font-size: 14px;

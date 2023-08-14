@@ -174,6 +174,12 @@ body.-darkMode .btnSecondary:hover {
   color: white;
 }
 
+body.-lightMode .btnSecondary:active,
+body.-darkMode .btnSecondary:active {
+  color: white; /* light mode + dark mode */
+  background-color: #a41c3e;
+}
+
 /* primary button - Nút màu hồng */
 .btnPrimary {
   padding: 0 24px;
@@ -198,7 +204,7 @@ body.-darkMode .btnPrimary:hover {
   color: white; /* light mode + dark mode */
   background-color: #c73559;
 }
-body.-lightMode .btnPrimaryactive,
+body.-lightMode .btnPrimary:active,
 body.-darkMode .btnPrimary:active {
   color: white; /* light mode + dark mode */
   background-color: #a41c3e;
